@@ -9,12 +9,12 @@ e.g. for [DoomEmacs][2] add the following snippets to your `packages.el` config.
 
 ```emacs-lisp
 ;; in your `packages.el`
-(package! dartclj :recipe (:host github :repo "burinc/dartclj.el"))
+(package! dartclojure :recipe (:host github :repo "burinc/dartclojure.el"))
 ```
 
 ### Usage
 
-To convert a given region in any buffer into ClojureDart syntax just `M-x dartclj-convert`
+To convert a given region in any buffer into ClojureDart syntax just `M-x dartclojure-convert`
 
 ### Links
 
