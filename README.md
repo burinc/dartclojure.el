@@ -1,4 +1,14 @@
 ### Emacs Interface to [DartClojure][0]
+### Example Usage
+
+- Convert region of code (in-place editing)
+![](https://github.com/burinc/dartclojure.el/raw/main/media/dartclojure-convert.gif)
+
+- Convert a region into clipboard for pasting into main code 
+![](https://github.com/burinc/dartclojure.el/raw/main/media/dartclojure-to-clipboard.gif)
+
+- Convert a region into a scratch buffer that can be quickly reviewed
+![](https://github.com/burinc/dartclojure.el/raw/main/media/dartclojure-paste-buffer.gif)
 
 ### Installation
 
@@ -14,9 +24,10 @@ Load it using your preferred Emacs package manager, e.g., for [DoomEmacs][2]:
 ;; config.el
 (use-package! dartclojure
   :config 
-  (setq dartclojure-bin "dartclojure"
-        dartclojure-opts "-m \"m\" -f \"f\""))
+  (setq dartclojure-opts "-m \"m\" -f \"f\""))
 ```
+
+You can also select a region in a file and run `M-x dartclojure-to-clipboard` to save the result to clipboard.
 
 ### Usage
 
