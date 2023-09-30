@@ -29,6 +29,23 @@ Load it using your preferred Emacs package manager, e.g., for [DoomEmacs][2]:
 
 You can also select a region in a file and run `M-x dartclojure-to-clipboard` to save the result to clipboard.
 
+Remap some of your Emacs keys to make it easier to use.
+e.g. for Doom Emacs, I use the following:
+
+``` emacs-lisp
+;; config.el
+(map! :leader
+      (:prefix ("d" . "dartclojure")
+       :desc "dartclojure to buffer"
+       "b" #'dartclojure-paste-buffer
+       :desc "dartclojure to clipboard"
+       "c" #'dartclojure-to-clipboard
+       :desc "dartclojure converter"
+       "x" #'dartclojure-convert))
+```
+
+So you can type `SPC d b`, `SPC d c`, or `SPC d x`.
+
 ### Usage
 
 To convert a given region in any buffer into ClojureDart syntax just `M-x dartclojure-convert`
